@@ -5,6 +5,7 @@ import pygame.constants
 import pygame.locals
 import sys
 import random
+import os
 
 # Inisialisasi pygame dan membuat tampilan dengan ukuran 1200 x 800 piksel
 pygame.init()
@@ -12,10 +13,12 @@ size = resX, resY = 1200, 800
 screen = pygame.display.set_mode(size)
 
 # Mengatur ikon dan judul aplikasi
-icon = pygame.image.load("../img/icon.png")
+iconPath = os.path.join("img", "icon.png")
+icon = pygame.image.load(iconPath)
 pygame.display.set_icon(icon)
 pygame.display.set_caption("Flood Fill Application")
 clock = pygame.time.Clock()
+fileName = 'changes.txt'
 
 # Mengatur waktu frame dan font teks
 FPS = 60
@@ -45,36 +48,28 @@ def display_grid(screen, grid, width=2, height=2) -> None:
                 pygame.Rect(x, y, width, height),
             )
 
+# Fungsi untuk menyimpan perubahan warna pada grid
+def recordChanges(grid, fileName):
+    with open(fileName, 'w') as f:
+        for row in grid:
+            for cell in row:
+                f.write(f"{cell[0]} {cell[1]} {cell[2]} ")
+
+
 # Fungsi untuk flood fill dengan algoritma DFS atau BFS
-def fillDfsBfs(grid, start, newColor=(150, 150, 0), algoritma="dfs"):
+def fillDfsBfs(grid, start, newColor=(150, 150, 0), algoritma="dfs", fileName=None):
     oldColor = grid[start[0]][start[1]]
     if oldColor == newColor:
         return grid
     stack = [start]
     removeIndex = -1 if algoritma == "dfs" else 0
     while len(stack) > 0:
-        '''
-        Pada implementasi ini, jika Algoritma adalah DFS,
-        maka penjelajahan akan dilakukan menggunakan stack
-        dan elemen yang ditambahkan ke stack akan dihapus
-        dari bagian paling belakang stack dengan perintah pop(-1).
-        Sedangkan jika Algoritma adalah BFS, maka penjelajahan
-        akan dilakukan menggunakan queue dan elemen yang ditambahkan
-        akan dihapus dari bagian depan queue dengan perintah pop(0).
-
-        Untuk setiap titik yang dikunjungi selama penjelajahan,
-        warnanya akan diubah menjadi newColor dan tetangganya akan
-        ditambahkan ke stack atau queue. Pada implementasi ini,
-        setiap kali ada sel yang berhasil diisi dengan warna,
-        maka fungsi yield akan dipanggil dan grid yang baru diisi
-        warna akan dikembalikan sebagai generator. Proses pengisian sel
-        dalam grid akan terus dilakukan hingga seluruh area yang terhubung
-        dengan sel awal (start) telah diisi dengan warna.
-        '''
         x, y = stack.pop(removeIndex)
         if grid[x][y] != oldColor:
             continue
         grid[x][y] = newColor
+        if fileName:
+            recordChanges(grid, fileName)
         if x > 0:
             stack.append((x - 1, y))
         if y > 0:
@@ -139,7 +134,7 @@ while True:
         if pygame.mouse.get_pressed()[1] or pygame.key.get_pressed()[pygame.K_f]:
             pos = pygame.mouse.get_pos()
             pos = postToGrid(pos)
-            gridStateIterator = fillDfsBfs(grid, pos, newColor=fillColor, algoritma=algoritma)
+            gridStateIterator = fillDfsBfs(grid, pos, newColor=fillColor, algoritma=algoritma, fileName="changes.txt")
         if pygame.mouse.get_pressed()[2]:
             pos = pygame.mouse.get_pos()
             coloring(pos, rightColor)

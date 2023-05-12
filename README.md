@@ -1,8 +1,10 @@
 # Food Fill - Simple Paint
 <h2 align="center">
-Simple Paint Application using DFS/BFS<br/>
+   <a href="" target="_blank">Simple Paint Application using DFS/BFS</a>
 </h2>
 <hr>
+
+> To watch the docs more detail [_here_](). 
 
 ## Table of Contents
 1. [General Info](#general-information)
@@ -80,27 +82,49 @@ A simple program that write in python programming language to implement flood-fi
 ## Video Capture
 <nl>
 
-<!-- ![Treasure Hunt Gif](https://github.com/rifqifarhansyah/Tubes2_dicarryVieridanZaki/blob/main/img/TreasureHunter.gif?raw=true) -->
+![Food Fill Gif](https://github.com/rifqifarhansyah/Tubes2_dicarryVieridanZaki/blob/main/img/TreasureHunter.gif?raw=true)
 
 <a name="screenshots"></a>
 
 ## Screenshots
-<!-- <p>
+<p>
   <img src="/img/SS1.png/">
-  <p>Figure 1. Config File (*txt)</p>
+  <p>Figure 1. Home Screen</p>
   <nl>
   <img src="/img/SS2.png/">
-  <p>Figure 2. Initial Appearance of the Program</p>
+  <p>Figure 2. Draw without Coloring</p>
   <nl>
   <img src="/img/SS3.png/">
-  <p>Figure 3. Result</p>
+  <p>Figure 3. Coloring</p>
   <nl>
-</p> -->
+  <img src="/img/SS4.png/">
+  <p>Figure 4. Visualization</p>
+  <nl>
+</p>
 
 <a name="structure"></a>
 
 ## Structure
 ```bash
+│   changes.txt
+│   README.md
+│   requirements.txt
+│
+├───doc
+│       13521166_MohammadRifqiFarhansyah.doc
+│       13521166_MohammadRifqiFarhansyah.pdf
+│
+├───img
+│       FoodFill.gif
+│       icon.png
+│       SS1.png
+│       SS2.png
+│       SS3.png
+│       SS4.png
+│
+└───src
+        main.py
+        visualization.py
 ```
 
 <a name="project-status">
