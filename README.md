@@ -1,10 +1,10 @@
 # Food Fill - Simple Paint
 <h2 align="center">
-   <a href="" target="_blank">Simple Paint Application using DFS/BFS</a>
+   <a href="https://youtu.be/FQxSS_ljs6A" target="_blank">Simple Paint Application using DFS/BFS</a>
 </h2>
 <hr>
 
-> To watch the docs more detail [_here_](). 
+> To watch the docs more detail [_here_](https://drive.google.com/file/d/1r4t4WKbjQ6ugJvhPdnUVoJF-RDB2UfjY/view?usp=sharing). 
 
 ## Table of Contents
 1. [General Info](#general-information)
@@ -42,6 +42,7 @@ A simple program that write in python programming language to implement flood-fi
 - `Erase the canvas` using `Right Click` on mouse
 - Choose `Algorithm` to solve the flood-fill problem by `Press C` on keyboard
 - Select a `Random Color` to fill the canvas by `Left Click` on color fill rectangle
+- Use `bucket tool` to fill the canvas with the choosen color by press `f` button on keyboard
 
 <a name="technologies-used"></a>
 
