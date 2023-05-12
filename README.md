@@ -82,23 +82,23 @@ A simple program that write in python programming language to implement flood-fi
 ## Video Capture
 <nl>
 
-![Food Fill Gif](https://github.com/rifqifarhansyah/Tubes2_dicarryVieridanZaki/blob/main/img/TreasureHunter.gif?raw=true)
+![Food Fill Gif](https://github.com/rifqifarhansyah/FoodFill-SimplePaint/blob/main/img/FoodFill.gif?raw=true)
 
 <a name="screenshots"></a>
 
 ## Screenshots
 <p>
-  <img src="/img/SS1.png/">
   <p>Figure 1. Home Screen</p>
+  <img src="/img/SS1.png/">
   <nl>
-  <img src="/img/SS2.png/">
   <p>Figure 2. Draw without Coloring</p>
+  <img src="/img/SS2.png/">
   <nl>
-  <img src="/img/SS3.png/">
   <p>Figure 3. Coloring</p>
+  <img src="/img/SS3.png/">
   <nl>
-  <img src="/img/SS4.png/">
   <p>Figure 4. Visualization</p>
+  <img src="/img/SS4.png/">
   <nl>
 </p>
 
