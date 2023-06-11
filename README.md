@@ -1,4 +1,4 @@
-# Food Fill - Simple Paint
+# Flood Fill - Simple Paint
 <h2 align="center">
    <a href="https://youtu.be/FQxSS_ljs6A" target="_blank">Simple Paint Application using DFS/BFS</a>
 </h2>
